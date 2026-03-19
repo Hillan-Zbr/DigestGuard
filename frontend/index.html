@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigestGuard : Épargne Digestive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="glass-container">
+        <header>
+            <h1>DigestGuard</h1>
+            <p>Analysez votre alimentation en un instant.</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="foodInput">Décrivez l'aliment ou le plat :</label>
+                    <input type="text" id="foodInput" placeholder="Ex: Risotto aux champignons et crème...">
+                </div>
+
+                <div class="input-group">
+                    <label for="imageInput" class="file-upload-label">
+                        <span id="fileName">Importer une photo (Optionnel)</span>
+                        <input type="file" id="imageInput" accept="image/*">
+                    </label>
+                </div>
+
+                <button id="analyzeBtn" class="primary-btn">Analyser</button>
+            </div>
+
+            <div id="loader" class="hidden">
+                <div class="spinner"></div>
+                <p>Analyse par l'Intelligence DigestGuard...</p>
+            </div>
+
+            <div id="resultCard" class="glass-card hidden">
+                <h2 id="foodName">Résultat</h2>
+                <div class="score-container">
+                    <span class="score-label">Score d'Épargne :</span>
+                    <div class="score-visual">
+                        <div class="score-bar" id="scoreBar"></div>
+                    </div>
+                    <span id="scoreValue" class="score-number"></span>
+                </div>
+                <div class="classification-badge" id="classificationBadge"></div>
+                <p id="adviceText" class="advice"></p>
+                <div id="followupContainer" class="hidden followup">
+                    <p id="followupQuestion"></p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

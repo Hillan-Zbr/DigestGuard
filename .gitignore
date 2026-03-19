@@ -1,0 +1,10 @@
+# Variables d'environnement (Sécurité)
+.env
+
+# Fichiers temporaires métier
+.tmp/
+
+# Fichiers Python compilés
+__pycache__/
+*.pyc
+*.pyo
