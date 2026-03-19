@@ -37,7 +37,7 @@ async function sendRequest(payload) {
     resultCard.classList.add('hidden');
 
     try {
-        const response = await fetch('http://localhost:5000/api/classify', {
+        const response = await fetch('/api/classify', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload)
